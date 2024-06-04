@@ -1,0 +1,140 @@
+/* Resetting default margin and padding */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for iframes */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Container for iframes */
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top frame container */
+.top-frame {
+    flex: 20;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* Bottom frame container */
+.bottom-frames {
+    flex: 80;
+    display: flex;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/* Style for each column */
+.column {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: #d92222;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#audioPlayer {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    /* background-color: #c0c03a; Background color for audio player */
+}
+
+#messageArea {
+    margin-top: 10px;
+    text-align: center;
+    /* background-color: #add8e6; Background color for message area */
+}
+
+.button-right-corner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 999;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .top-frame,
+    .bottom-frames {
+        flex: auto;
+    }
+}
+
+/* Highlight on hover */
+.hoverable:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+/* Responsive audio player */
+@media screen and (max-width: 480px) {
+    #audioPlayer {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+/* Recording indicator */
+.recording-symbol {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    font-size: 24px;
+    display: none;
+}
+/* Flex container for buttons and audio player */
+#recordingContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Margin for the audio player */
+.audio-player {
+    margin-top: 10px;
+}

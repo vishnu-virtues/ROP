@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Summary Generator</title>
+    <link type="text/css" rel="stylesheet" href="/static/Style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="top-frame">
+            <div id="recordingContent">
+                <div class="button-container">
+                    <button class="button" id="startBtn">Start Recording</button>
+                    <button class="button" id="stopBtn">Stop Recording</button>
+                    <button class="button" id="transcribeBtn">Transcribe</button>
+                </div>
+                <audio id="audioPlayer" class="audio-player" controls style="display:none;"> 
+                    <source src="" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+                <div id="messageArea"></div> 
+                <div class="recording-symbol">&#9899;</div>
+            </div>
+            <div id="transcriptionContent" style="display: none;">
+                <h2>Transcription Settings</h2>
+            </div>
+        </div>
+        <div class="bottom-frames">
+            <div class="column">
+                <h2>Speaker Transcription</h2>
+                <div id="speakerTranscription"></div>
+            </div>
+            <div class="column">
+                <h2>Clinical Documentation</h2>
+                <div id="json-display"></div>
+            </div>
+        </div>
+        <button class="button button-right-corner" id="redirectBtn">Redirect to EMS</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/Script.js"></script>
+</body>
+</html>
